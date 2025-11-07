@@ -1,0 +1,260 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root {
+        --font1: "Roboto";
+        --font2: "Poppins";
+        --font3: "Raleway";
+        --bg-color: #000000;
+        --color: #dddddd;
+        --text-color: #555;
+        --hcolor: #1284b6;
+        --color1: #f4fafd;
+    }
+
+    .container {
+        display: flex;
+        min-height: 100vh;
+        font-family: var(--font1);
+        overflow-x: hidden;
+    }
+
+    .sidebar {
+        width: 250px;
+        position: fixed;
+        height: 100%;
+        background-color: var(--bg-color);
+        color: var(--color);
+        top: 0;
+        left: 0;
+        padding: 20px 20px;
+        transition: 0.4s ease;
+        z-index: 1000;
+        overflow-y: scroll;
+    }
+
+    .sidebar img {
+        border-radius: 50%;
+        margin: 50px;
+        width: 100px;
+    }
+
+
+    .toggle-btn {
+        display: none;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: var(--bg-color);
+        color: var(--color);
+        border: none;
+        font-size: 24px;
+        padding: 8px 12px;
+        cursor: pointer;
+        z-index: 2000;
+    }
+
+    .sidebar h2,
+    p {
+        margin: 20px;
+    }
+
+    .sidebar h2 {
+        font-size: 25px;
+        font-family: var(--font2);
+    }
+
+    .sidebar p {
+        font-size: 18px;
+        font-family: var(--font2);
+    }
+
+    .social-icons {
+        font-size: 20px;
+    }
+
+    .fa-brands:hover {
+        color: var(--hcolor)
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .menu li,
+    a {
+        color: var(--color);
+        list-style: none;
+        text-decoration: none;
+        margin: 10px 10px;
+        font-size: 20px;
+    }
+
+    .fa-regular,
+    .fa-solid {
+        font-size: 15px;
+    }
+
+    .fa-solid:hover,
+    .fa-regular:hover {
+        color: var(--hcolor);
+    }
+
+    .main-content {
+        margin-left: 250px;
+        flex: 1;
+    }
+
+    .banner {
+        position: relative;
+        height: 100vh;
+    }
+
+    .banner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .banner-text {
+        position: absolute;
+        top: 60%;
+        left: 5%;
+        color: var(--color);
+    }
+
+    .banner-text h1 {
+        font-size: 40px;
+        font-family: var(--font1);
+    }
+
+    .banner-text p {
+        font-size: 30px;
+        font-family: var(--font1);
+    }
+
+    .container-wrap {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        font-family: var(--font1);
+    }
+
+    /*====== About section ===== */
+    .about {
+        margin: 40px 60px;
+    }
+
+    .about h2 {
+        font-size: 30px;
+        color: var(--bg-color);
+        font-family: var(--font3);
+    }
+
+    .about p {
+        color: var(--text-color);
+        font-size: 20px;
+        line-break: 2;
+        line-height: normal;
+        margin: 10px 0px;
+    }
+
+    .section img {
+        width: 300px;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .about-section {
+        color: var(--text-color);
+        margin: 10px 40px;
+    }
+
+    .about-section h3 {
+        font-size: 25px;
+        font-family: var(--font3);
+        color: var(--bg-color);
+    }
+
+    .about-section p {
+        font-size: 18px;
+    }
+
+    .list {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        font-size: 18px;
+        margin: 30px;
+    }
+
+    .list span {
+        color: var(--bg-color);
+        font-weight: 800;
+        margin: 10px;
+    }
+
+    .list li {
+        list-style: none;
+        margin: 10px;
+    }
+
+    /*==== stats section ==== */
+    .stats-section {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px auto;
+        padding: 40px 8rem;
+        gap: 20px;
+
+    }
+
+    .stats-section span {
+        font-family: var(--font1);
+        color: var(--btn-color);
+        font-weight: 900;
+        font-size: 30px;
+    }
+
+    .stats-section p {
+        margin: 5px;
+        font-size: 25px;
+        font-family: var(--font3);
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            height: 100%;
+            /* width: 350px; */
+        }
+
+        .sidebar.active {
+            left: 0;
+        }
+
+        .toggle-btn {
+            display: block;
+        }
+        .banner{
+            margin: 0px;
+            width: 100%;
+        }
+
+        .banner img {
+            height: 80vh;
+        }
+    }
