@@ -12,6 +12,10 @@
         --font3: "Raleway";
         --bg-color: #000000;
         --color: #dddddd;
+        --color2: #eaf6f8;
+        --text-color: #555;
+        --hcolor: #1284b6;
+        --color1: #fdfdfd;
     }
 
     .container {
@@ -66,7 +70,6 @@
     .sidebar .menu a {
         text-decoration: none;
         color: var(--color);
-        /* transition: 0.3s; */
     }
 
     .sidebar a:hover {
@@ -127,10 +130,10 @@
     .fa-brands:hover,
     .menu .fa-solid:hover,
     .menu .fa-regular:hover {
-        color: #1284b6;
+        color: var(--hcolor);
     }
 
-    /*====== About section ===== */
+    /*------ About section ------------- */
     .container-wrap {
         display: flex;
         justify-content: space-between;
@@ -196,7 +199,7 @@
         margin: 10px;
     }
 
-    /*==== stats section ==== */
+    /*------- stats section  -----*/
     .stats-section {
         display: flex;
         justify-content: space-between;
@@ -208,7 +211,6 @@
 
     .stats-section span {
         font-family: var(--font1);
-        color: var(--btn-color);
         font-weight: 900;
         font-size: 30px;
     }
@@ -219,7 +221,209 @@
         font-family: var(--font3);
     }
 
-    /* Mobile View */
+    /*------------ skills section -------------- */
+
+    .skills {
+        background-color: var(--color2);
+        padding: 80px 60px;
+    }
+
+    .skills h2 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .skills p {
+        font-size: 18px;
+        color: var(--text-color)
+    }
+
+    .skill-bars {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .bar .info {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .progress {
+        background: #eee;
+        height: 8px;
+    }
+
+    .progress-line {
+        height: 100%;
+        background-color: var(--hcolor);
+    }
+
+    .progress-line.html {
+        width: 100%;
+    }
+
+    .progress-line.css {
+        width: 90%;
+    }
+
+    .progress-line.js {
+        width: 75%;
+    }
+
+    .progress-line.php {
+        width: 80%;
+    }
+
+    .progress-line.wp {
+        width: 90%;
+    }
+
+    .progress-line.ps {
+        width: 55%;
+    }
+
+    .resume {
+        padding: 80px 40px;
+    }
+
+    .resume h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .resume p {
+        margin-bottom: 30px;
+        font-size: 18px;
+    }
+
+    /*-------------- Resume section ---------- */
+    .resume-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    .resume h3 {
+        font-size: 20px;
+        color: var(--hcolor);
+        margin-bottom: 10px;
+    }
+
+    .resume-item {
+        margin-bottom: 20px;
+        border-left: 2px solid var(--hcolor);
+        padding-left: 30px;
+    }
+
+    .resume-item ul li {
+        list-style: circle;
+        margin-bottom: 10px;
+        color: var(--text-color);
+    }
+
+    /* --------------- contact section ------------ */
+    .contact-section {
+        width: 90%;
+        margin: 40px auto;
+    }
+
+    .contact-container {
+        font-family: var(--font1);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+.contact-section h2{
+    margin-bottom: 20px;
+    font-family: var(--font3);
+}
+    .contact-section p {
+        margin-bottom: 20px;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        gap: 20px;
+        background-color: var(--color1);
+        box-shadow: 0px 2px 5px 2px #888888;
+    }
+.contact-info h4{
+    font-family: var(--font3);
+}
+    .contact-form {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        padding: 70px 50px;
+        box-shadow: 0px 2px 5px 2px #888888;
+    }
+
+    .form-row {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .contact-form button {
+        display: block;
+        margin: 20px auto 0;
+        background: var(--hcolor);
+        color: var(--color1);
+        padding: 10px 25px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+        background: #0b84c0;
+    }
+     .contact-container .fa-solid{
+        border-radius: 50%;
+        font-size: 20px;
+        padding: 10px auto;
+        gap: 10px;
+     }
+     .fa-solid:hover{
+        color: var(--color);
+        cursor: pointer;
+     }
+
+  /*---------- footer -------- */
+    footer {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 14px;
+        color: var(--text-color);
+        background-color: var(--color2);
+        padding: 10px 0px;
+        font-family: var(--font1);
+    }
+
+    footer .highlight {
+        margin-top: 10px;
+        color: var(--hcolor);
+    }
+
+    footer a {
+        color: #0d99e0;
+        text-decoration: none;
+    }
+
+    /* --------- Responsive Design --------- */
     @media (max-width: 768px) {
         .container {
             flex-direction: column;
@@ -246,7 +450,7 @@
         }
 
         .banner-text {
-            top: 10%;
+            top: 7%;
         }
 
         .banner img {
@@ -282,5 +486,22 @@
             flex-wrap: wrap;
             flex-direction: column;
             gap: 30px;
+        }
+
+        .skill-bars {
+            grid-template-columns: 1fr;
+        }
+
+        .resume-container {
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+        .contact-info {
+            min-width: 100%;
+        }
+
+        .contact-form {
+            min-width: 100%;
         }
     }
