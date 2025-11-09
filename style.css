@@ -117,26 +117,9 @@
         z-index: 2000;
     }
 
-  .social-icons {
-  display: flex;
-  justify-content: center;   /* Centers icons horizontally */
-  align-items: center;       /* Centers vertically (if needed) */
-  gap: 15px;                 /* Space between icons */
-  margin-top: 20px;
-}
 
 .fa-brands {
   font-size: 25px;
-  width: 50px;
-  margin-top: 20px;
-  height: 50px;
-  background-color: #555;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.3s;
 }
 
 .fa-brands:hover {
