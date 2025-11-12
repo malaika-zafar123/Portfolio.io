@@ -10,7 +10,7 @@
         --font1: "Roboto";
         --font2: "Poppins";
         --font3: "Raleway";
-        --side-color:#02241c;
+        --side-color: #02241c;
         --bg-color: #000000;
         --color: #dddddd;
         --color2: #eaf6f8;
@@ -32,10 +32,12 @@
         background: var(--side-color);
         color: var(--color);
         height: 100%;
-        padding: 20px 20px;
-        transition: 0.4s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
         z-index: 1000;
-        overflow-y: scroll;
     }
 
     .sidebar .profile img {
@@ -43,30 +45,33 @@
         height: 150px;
         border-radius: 50%;
         object-fit: cover;
-        margin: 30px;
     }
 
     .profile h2 {
-        padding: 10px;
+        text-align: center;
         font-size: 25px;
         font-family: var(--font1);
     }
 
     .profile p {
-        font-size: 20px;
+        font-size: 18px;
         font-family: var(--font3);
     }
 
     .sidebar .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
         list-style: none;
         font-family: var(--font2);
-        margin-top: 20px;
-        padding: 20px;
+        text-align: center;
+        padding: 10px;
     }
 
     .sidebar .menu li {
         font-size: 20px;
-        margin: 10px 0;
+        margin: 5px 0;
 
     }
 
@@ -207,9 +212,10 @@
     .stats-section {
         display: flex;
         justify-content: space-between;
-        align-items: left;
+        text-align: center;
+        align-items: center;
         margin: 20px auto;
-        padding: 40px 8rem;
+        padding: 40px 6rem;
         gap: 20px;
 
     }
@@ -221,7 +227,7 @@
     }
 
     .stats-section p {
-        text-align: left;
+        text-align: center;
         margin: 5px;
         font-size: 25px;
         font-family: var(--font3);
@@ -394,8 +400,8 @@
         background: var(--hcolor);
         color: var(--color1);
         font-size: 20px;
-        width: 50px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -437,7 +443,7 @@
         font-family: var(--font1);
         display: flex;
         flex-wrap: wrap;
-        gap: 30px;
+        gap: 20px;
         color: var(--text-color)
     }
 
@@ -446,17 +452,26 @@
         font-family: var(--font3);
     }
 
-    .contact-section p {
-        margin-bottom: 20px;
-    }
-
     .contact-info {
-        display: flex;
-        flex-direction: column;
+        max-width: 40%;
         padding: 40px;
-        gap: 10px;
         background-color: var(--color1);
         box-shadow: 0px 2px 5px 2px #888888;
+    }
+
+    .info-box {
+        display: flex;
+        width: fit-content;
+    }
+
+    .box {
+        margin: 10px 5px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box p {
+        margin-left: -4px;
     }
 
     .contact-info h4 {
@@ -465,7 +480,7 @@
     }
 
     .contact-form {
-        width: 45%;
+        width: 55%;
         display: flex;
         font-family: var(--font1);
         flex-direction: column;
@@ -484,7 +499,7 @@
     .contact-form textarea {
         font-family: var(--font1);
         max-width: 100%;
-        max-height: 140px;
+        max-height: 150px;
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 4px;
@@ -584,7 +599,7 @@
         }
 
         .banner-text {
-            top: 7%;
+            top: 5%;
         }
 
         .banner img {
@@ -659,7 +674,7 @@
         }
 
         .banner-text {
-            top: 4%;
+            top: 3%;
         }
 
         .banner img {
